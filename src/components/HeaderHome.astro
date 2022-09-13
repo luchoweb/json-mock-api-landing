@@ -18,13 +18,15 @@ import heroImage from '../assets/images/devs.jpg';
         Easy, fast and safe. Create mocks in JSON format and access them through endpoints that you can create in the administration panel.
       </p>
 
-      <Button text="Get started" />
+      <div class="hero__btn-box">
+        <Button text="Get started" />
 
-      <p class="hero__disclaimer">
-        No credit card required.
-        <br />
-        <strong>Free for Developers</strong>.
-      </p>
+        <p class="hero__disclaimer">
+          No credit card required.
+          <br />
+          <strong>Free for Developers</strong>.
+        </p>
+      </div>
 
       <div class="hero__stats">
         <div class="stats__requests">
@@ -90,7 +92,12 @@ import heroImage from '../assets/images/devs.jpg';
 
   .hero__intro {
     color: var(--color-gray);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero__btn-box {
+    display: flex;
+    gap: 1rem;
   }
 
   .hero__disclaimer {
