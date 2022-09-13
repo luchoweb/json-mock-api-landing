@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.7.0",
+    "@fontsource/ubuntu": "^4.5.11",
     "astro": "^1.2.2",
     "astro-icon": "^0.7.3"
   }
