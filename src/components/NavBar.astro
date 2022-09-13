@@ -1,22 +1,56 @@
 <nav>
+  <a href="/" class="brand">
+    JSON Mock API
+  </a>
+
   <ul class="menu">
     <li class="menu__item">
-      <a href="/">About</a>
+      <a href="/about">About</a>
+    </li>
+
+    <li class="menu__item">
+      <a href="/princing">Princing</a>
+    </li>
+
+    <li class="menu__item">
+      <a href="https://docs.jsonmockapi.com" target="_blank" rel="noreferrer">Documentation</a>
     </li>
   </ul>
 </nav>
 
 <style>
   nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: sticky;
+    gap: 1rem;
     top: 0;
+    padding: 2rem 0;
     width: 100%;
-    margin-bottom: 2rem;
+  }
+
+  nav a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  nav .brand {
+    font-size: var(--font-size-base);
+    font-weight: var(--fw-bold);
   }
 
   nav .menu {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
-    padding: 2rem 0;
+    padding: 0;
+  }
+
+  nav .menu__item {
+    font-size: calc(var(--font-size-base) - .15rem);
   }
 </style>
