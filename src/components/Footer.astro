@@ -76,15 +76,11 @@ import { Icon } from 'astro-icon';
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1.5rem;
-    padding: 3rem var(--padding-base) 1.7rem var(--padding-base);
+    padding: 3rem 2rem 1.7rem 2rem;
   }
 
   .footer__col {
-    width: 25%
-  }
-
-  .footer__col:first-child {
-    width: 40%
+    width: 100%;
   }
 
   .footer__brand {
@@ -169,5 +165,21 @@ import { Icon } from 'astro-icon';
     color: var(--color-text);
     font-weight: var(--fw-bold);
     text-decoration: none;
+  }
+
+  @media (min-width: 768px) {
+    .footer__col {
+      width: 25%
+    }
+
+    .footer__col:first-child {
+      width: 40%
+    }
+  }
+
+  @media (min-width: 991px) {
+    .footer {
+      padding: 3rem var(--padding-base) 1.7rem var(--padding-base);
+    }
   }
 </style>
