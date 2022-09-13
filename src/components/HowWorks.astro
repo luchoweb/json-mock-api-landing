@@ -1,0 +1,120 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<section class="how-works">
+  <div class="container">
+    <h3 class="how-works__title">
+      How it works
+    </h3>
+
+    <p class="how-works__subhead">
+      Thinking about ease and scalability, you can create your API in minutes.
+    </p>
+
+    <ul class="how-works__steps">
+      <li class="step">
+        <div class="step__icon">
+          <Icon pack="tabler" name="user" />
+        </div>
+        <p class="step__title">
+          1. Create an account
+        </p>
+        <p class="step__text">
+          Create an account using your email. It's free and safe.
+        </p>
+      </li>
+      
+      <li class="step">
+        <div class="step__icon">
+          <Icon name="uil:file-network" />
+        </div>
+        <p class="step__title">
+          2. Add an endpoint
+        </p>
+        <p class="step__text">
+          Login to the panel and create an endpoint, it's easy.
+        </p>
+      </li>
+
+      <li class="step">
+        <div class="step__icon">
+          <Icon name="uil:brackets-curly" />
+        </div>
+        <p class="step__title">
+          3. Type or paste JSON
+        </p>
+        <p class="step__text">
+          Lastly, paste or type your JSON code. That's it.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .how-works {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    text-align: center;
+  }
+
+  .how-works__title {
+    font-size: calc(var(--font-size-xl) - 1.2rem);
+    margin: 0;
+  }
+
+  .how-works__subhead {
+    color: var(--color-gray);
+    font-size: calc(var(--font-size-base) - .15rem);
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .how-works__steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 3rem 0 0;
+    padding: 0;
+  }
+
+  .step {
+    width: 100%;
+  }
+
+  .step__icon {
+    margin: 0 auto 1rem auto;
+    width: 100px;
+  }
+
+  .step__icon [astro-icon] {
+    color: var(--color-bg);
+    height: 90px;
+  }
+
+  .step__title {
+    font-size: var(--font-size-base);
+    font-weight: var(--fw-bold);
+    margin: 0 0 .5rem 0;
+  }
+
+  .step__text {
+    font-size: calc(var(--font-size-base) - .22rem);
+    margin: 0 0 1rem 0;
+  }
+
+  .how-works__done {
+    font-size: calc(var(--font-size-base) - .22rem);
+    text-align: left;
+  }
+
+  @media (min-width: 767px) {
+    .step {
+      margin: 0;
+      width: 25%;
+    }
+  }
+</style>

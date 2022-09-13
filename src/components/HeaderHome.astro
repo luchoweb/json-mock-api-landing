@@ -72,16 +72,10 @@ import heroImage from '../assets/images/devs.jpg';
 </header>
 
 <style>
-  .hero {
-    align-items: stretch;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-  }
-
   .hero__text {
-    padding: 0 var(--padding-base);
+    background-color: #ffffff;
+    padding: 0 2rem 4rem 2rem;
     max-width: 700px;
-    padding-bottom: 2.5rem;
   }
 
   .hero__title {
@@ -124,6 +118,7 @@ import heroImage from '../assets/images/devs.jpg';
   }
 
   .hero__image {
+    display: none;
     position: relative;
     overflow: hidden;
   }
@@ -142,5 +137,27 @@ import heroImage from '../assets/images/devs.jpg';
     margin: 0;
     padding: .2rem;
     position: absolute;
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      align-items: stretch;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+    }
+
+    .hero__text {
+      padding: 0 3rem 2rem 3rem;
+    }
+
+    .hero__image {
+      display: block;
+    }
+  }
+
+  @media (min-width: 991px) {
+    .hero__text {
+      padding: .5rem var(--padding-base) 3rem;
+    }
   }
 </style>
