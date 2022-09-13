@@ -20,10 +20,16 @@ import heroImage from '../assets/images/devs.jpg';
 
       <Button text="Get started" />
 
+      <p class="hero__disclaimer">
+        No credit card required.
+        <br />
+        <strong>Free for Developers</strong>.
+      </p>
+
       <div class="hero__stats">
         <div class="stats__requests">
           <p class="stats__number">
-            1.918.342+
+            5.000+
           </p>
 
           <p class="stats__label">
@@ -33,7 +39,7 @@ import heroImage from '../assets/images/devs.jpg';
 
         <div class="stats__endpoints">
           <p class="stats__number">
-            3010+
+            30+
           </p>
 
           <p class="stats__label">
@@ -43,7 +49,7 @@ import heroImage from '../assets/images/devs.jpg';
 
         <div class="stats__users">
           <p class="stats__number">
-            315+
+            10+
           </p>
 
           <p class="stats__label">
@@ -85,6 +91,11 @@ import heroImage from '../assets/images/devs.jpg';
   .hero__intro {
     color: var(--color-gray);
     margin-bottom: 2rem;
+  }
+
+  .hero__disclaimer {
+    color: var(--color-gray);
+    font-size: calc(var(--font-size-base) - .4rem);
   }
 
   .hero__stats {

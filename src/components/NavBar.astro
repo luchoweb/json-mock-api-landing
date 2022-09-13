@@ -1,6 +1,6 @@
 <nav>
   <a href="/" class="brand">
-    JSON Mock API
+    {`{ JSON Mock API }`}
   </a>
 
   <ul class="menu">
@@ -24,9 +24,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: sticky;
     gap: 1rem;
-    top: 0;
     padding: 2rem 0;
     width: 100%;
   }
@@ -51,6 +49,12 @@
   }
 
   nav .menu__item {
-    font-size: calc(var(--font-size-base) - .15rem);
+    font-size: var(--font-size-base);
+  }
+
+  @media (min-width: 991px) {
+    nav .menu__item {
+      font-size: calc(var(--font-size-base) - .1rem);
+    }
   }
 </style>
