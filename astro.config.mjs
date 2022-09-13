@@ -4,5 +4,10 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [image()]
+  integrations: [image()],
+  vite: {
+    ssr: {
+      external: ["svgo"],
+    },
+  },
 });

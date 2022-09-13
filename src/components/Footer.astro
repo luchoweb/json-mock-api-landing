@@ -1,11 +1,178 @@
+---
+import { Icon } from 'astro-icon';
+---
+
 <footer class="footer">
-  FOOTER
+  <div class="footer__col">
+    <p class="footer__brand">
+      {`{ JSON Mock API }`}
+    </p>
+    <p class="footer__text">
+      We are a project created with the purpose of learning about web development and APIs. Feel free to send us comments or bug reports to bugs@jsonmockapi.com
+    </p>
+  </div>
+  <div class="footer__col">
+    <h4 class="footer__title">
+      Legal
+    </h4>
+
+    <ul class="footer__legal-list">
+      <li>
+        <a href="">
+          Terms
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          Privacy
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          Contract
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer__col">
+    <h4 class="footer__title">
+      Support
+    </h4>
+
+    <p class="footer__text">
+      If you are a commercial customer, we have several service channels for you.
+    </p>
+    
+    <ul class="footer__support-list">
+      <li>
+        <a href="">
+          <Icon name="mdi:whatsapp" />
+          WhatsApp
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          <Icon name="mdi:facebook" />
+          Facebook
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          <Icon name="mdi:telegram" />
+          Telegram
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <hr role="separator" />
+
+  <p class="footer__text footer__copy">Built with &#10084; by <a href="https://codify.com.co" target="_blank" rel="noreferrer">Codify</a></p>
 </footer>
 
 <style>
   .footer {
+    align-items: flex-start;
     background-color: var(--color-text);
     color: var(--color-bg);
-    padding: 2rem var(--padding-base);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 3rem var(--padding-base) 2rem var(--padding-base);
+  }
+
+  .footer__col {
+    width: 25%
+  }
+
+  .footer__col:first-child {
+    width: 40%
+  }
+
+  .footer__brand {
+    font-weight: var(--fw-bold);
+    margin: 0 0 .5rem 0;
+  }
+
+  .footer__title {
+    margin: 0 0 1rem 0;
+  }
+
+  .footer__text {
+    font-size: calc(var(--font-size-base) - .3rem);
+    line-height: 1.4em;
+    margin: 0 0 .5em 0;
+  }
+
+  .footer__text:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer__support-list {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: .5rem 0 0;
+    padding: 0;
+  }
+
+  .footer__support-list li a,
+  .footer__legal-list li a {
+    color: var(--color-bg);
+    font-size: calc(var(--font-size-base) - .4rem);
+    text-decoration: none;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .footer__support-list li a:hover,
+  .footer__legal-list li a:hover {
+    opacity: 0.8;
+  }
+
+  .footer__legal-list {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  .footer__legal-list li {
+    margin-bottom: .2rem;
+  }
+
+  .footer__legal-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer__legal-list li a {
+    font-size: calc(var(--font-size-base) - .3rem);
+  }
+
+  .footer [astro-icon] {
+    height: 15px;
+    vertical-align: middle;
+  }
+
+  .footer hr {
+    border: none;
+    border-top: 1px solid var(--color-separator);
+    margin: .5rem 0;
+    width: 100%;
+  }
+
+  .footer__copy {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer__copy a {
+    color: var(--color-bg);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
   }
 </style>
