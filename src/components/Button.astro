@@ -1,0 +1,35 @@
+---
+export interface Props {
+	text: string;
+	href?: string;
+	type?: any;
+	color?: string;
+}
+
+const { href, type = 'button', color = 'blue', text } = Astro.props;
+---
+
+<>
+{ href &&  <a href={href} class={`btn btn-${color}`}>{ text }</a> } 
+{ !href && <button class={`btn btn-${color}`} type={type}>{ text }</button> }
+</>
+
+<style>
+	.btn {
+		appearance: none;
+		border: none;
+		cursor: pointer;
+		font-size: calc(var(--font-size-base) - .2rem);
+		padding: .7rem 1.3rem;
+		text-transform: capitalize;
+		transition: opacity 200ms ease-in-out ;
+	}
+	.btn:hover {
+		opacity: .8;
+	}
+
+	.btn-blue {
+		background-color: var(--color-blue);
+		color: var(--color-bg);
+	}
+</style>

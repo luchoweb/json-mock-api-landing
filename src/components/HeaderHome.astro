@@ -1,0 +1,127 @@
+---
+import { Image } from '@astrojs/image/components';
+import NavBar from './NavBar.astro';
+import Button from './Button.astro';
+import heroImage from '../assets/images/devs.jpg';
+---
+
+<header>
+  <div class="hero">
+    <div class="hero__text">
+      <NavBar />
+
+      <h2 class="hero__title">
+        Create a static API in JSON format for your projects
+      </h2>
+
+      <p class="hero__intro">
+        Easy, fast and safe. Create mocks in JSON format and access them through endpoints that you can create in the administration panel.
+      </p>
+
+      <Button text="Get started" />
+
+      <div class="hero__stats">
+        <div class="stats__requests">
+          <p class="stats__number">
+            1.918.342+
+          </p>
+
+          <p class="stats__label">
+            Requests delivered
+          </p>
+        </div>
+
+        <div class="stats__endpoints">
+          <p class="stats__number">
+            3010+
+          </p>
+
+          <p class="stats__label">
+            Endpoints created
+          </p>
+        </div>
+
+        <div class="stats__users">
+          <p class="stats__number">
+            315+
+          </p>
+
+          <p class="stats__label">
+            Registered users
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__image">
+      <Image src={ heroImage } alt="Devs" />
+
+      <p class="image__caption">
+        Photo by Freepik&reg;
+      </p>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hero {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .hero__text {
+    padding: 0 var(--padding-base);
+    max-width: 700px;
+    padding-bottom: 3rem;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-xl);
+    line-height: 1.2em;
+  }
+
+  .hero__intro {
+    color: var(--color-gray);
+    margin-bottom: 2rem;
+  }
+
+  .hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .hero__stats .stats__number {
+    font-size: calc(var(--font-size-base) + .5rem);
+    font-weight: var(--fw-bold);
+    margin: 0;
+  }
+  .hero__stats .stats__label {
+    font-size: calc(var(--font-size-base) - .4rem);
+    margin: 0;
+  }
+
+  .hero__image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero__image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .hero__image .image__caption {
+    background-color: rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    left: 0;
+    font-size: calc(var(--font-size-base) - .6rem);
+    margin: 0;
+    padding: .2rem;
+    position: absolute;
+  }
+</style>
